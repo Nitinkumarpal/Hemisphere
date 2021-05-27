@@ -1,0 +1,548 @@
+.imgp {
+    
+    text-align: center;
+    color: white;
+    height: 650px;
+  }
+ 
+  
+  /* Top left text */
+  .top-left {
+    position: absolute;
+    top: 150px;
+    left: 400px;
+    
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  .top-left h4 {
+    color:#fff;
+    
+  }
+
+  .centered h1
+
+  {
+    font-weight:700;
+
+	letter-spacing:5px;
+	margin-bottom:30px;
+    font-size: 399%;
+  }
+
+  .centered h5
+
+  {
+    font-weight:700;
+    text-transform: uppercase;
+	letter-spacing:5px;
+	margin-bottom:0;
+    font-size: 199%;
+  }
+  
+  
+  
+ 
+  /* Centered text */
+  .centered {
+    position: absolute;
+    top: 250px;
+    left: 390px;
+    /* transform: translate(-50%, -50%); */
+  }
+
+
+  /* image-text */
+
+  .img-text {
+    
+    text-align: center;
+    color: white;
+    height: 650px;
+    background-color: white;
+  }
+
+
+
+  .img-text h2
+
+  {
+      margin-top: 10%;
+    font-weight:700;
+    color: #7a6544;
+	letter-spacing:3px;
+	margin-bottom:30px;
+    font-size: 399%;
+    font-family: "DM Serif Display", serif;
+  }
+
+  .img-text h4
+
+  {
+      margin-top: 2%;
+    font-weight:700;
+    color: #7a6544;
+	letter-spacing:2px;
+	margin-bottom:30px;
+    font-size: 199%;
+    font-family: "DM Serif Display", serif;
+  }
+
+    h5 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #bb9f72;
+}
+
+
+.overviewText p {
+    font-weight: 400;
+    color: #000;
+    font-size: 115%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+
+/* 
+element.style {
+} */
+
+.overviewText ul li section {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+/* article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+    display: block;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+section {
+    display: block;
+} */
+
+.overviewText ul li {
+    width: 50%;
+    padding: 5px;
+    border: solid #e0e0e0;
+    border-width: 0 1px 1px 0;
+    font-weight: 500;
+}
+
+
+
+
+
+.overviewText ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  width: 100%;
+  float: left;
+}
+/* golf bag welcom hemisphere nodia life style */
+.overviewText ul li section .img-fluid {
+    flex: 0 0 60px;
+    margin-right: 10px;
+}
+
+
+.overviewText ul li:nth-child(2n){
+	border-right-color:transparent;
+}
+.overviewText ul li:nth-last-child(1), .overviewText ul li:nth-last-child(2) {
+  border-bottom-color: transparent;
+}
+
+.overviewText ul li:nth-child(2n) {
+  border-right-color: transparent;
+}
+
+span{
+  color: #000;
+}
+
+
+
+/* 3/4/5 bhk villas and 3/4 bhk apartment */
+
+.projectBtnHead{
+	margin-bottom:30px;
+	text-align:center;
+	position:relative;
+	z-index:2;
+}
+
+.projectBtnHead ul{
+	display:flex;
+	justify-content:center;
+	margin-bottom:60px;
+  margin-top: 150px;
+}
+
+.projectBtnHead ul li{
+	margin:0 10px;
+	width:30%;
+}
+
+.projectBtnHead ul li button{
+	cursor:pointer;
+	border:none;
+	outline:none;
+	background:#fff;
+	padding:20px;
+	border-radius:10px 10px;
+	transition:all 300ms ease;
+	filter:grayscale(1);
+	opacity:0.5;
+}
+
+.projectBtnHead ul li button .img-fluid{
+	transition:all 300ms ease;
+}
+
+
+img {
+  width: 100%;
+  display: block;
+}
+
+.projectBtnHead ul li button:hover{
+opacity:1;
+}
+
+.projectBtnHead ul li button h5{
+margin-bottom:0;
+margin-top:20px;
+font-weight:700;
+letter-spacing:2px;
+padding:7px;
+background: #bb9f72;
+border-radius:5px;
+font-size: 18px;
+}
+
+.projectBtnHead ul li button.projectBtn.active{
+background:f1eee9;
+border:solid #bb9f72;
+border-width:1px 1px 4px;
+filter:grayscale(0);
+opacity:1;
+}
+
+/* .projectBtnHead ul li button.projectBtn.active .img-fluid{
+} */
+
+.projectBtnHead p{
+font-weight:500;
+}
+
+
+
+/* GOlf villas */
+
+
+
+
+.heading {
+    display: table;
+    position: relative;
+    margin-bottom: 40px;
+    z-index: 1;
+}
+
+
+
+
+.heading h2 {
+    font: 400 2.5rem 'DM Serif Display', serif;
+    font-weight: bolder;
+    font-size: 199%;
+}
+
+.heading h2 {
+    font: 400 3.5rem 'DM Serif Display', serif;
+}
+.heading h2, .heading h4 {
+    display: table;
+    color: #000;
+    font-weight: bolder;
+    background: -webkit-linear-gradient(
+90deg
+,#191310 0%,#7a6544 80%);
+    background: -moz-linear-gradient(90deg,#191310 0%,#7a6544 80%);
+    background: linear-gradient(
+90deg
+,#191310 0%,#7a6544 80%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+
+.projectBtnHead p {
+  font-weight: 500;
+  
+}
+
+p {
+  font-weight: 400;
+}
+
+
+
+
+
+/* Gold Standerd Life Style */
+
+
+
+.bg-image {
+  background: center no-repeat fixed;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+}
+
+.padding {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+
+
+.heading h6 {
+  color: #191919;
+  text-transform: uppercase;
+  position: relative;
+  padding-left: 70px;
+  margin-bottom: 0px;
+}
+
+
+
+
+.heading h2.text-white, .heading h4.text-white {
+  background: -webkit-linear-gradient(
+90deg
+,#bb9f72 0%,#fcedd5 80%);
+  background: -moz-linear-gradient(90deg,#bb9f72 0%,#fcedd5 80%);
+  background: linear-gradient(
+90deg
+,#bb9f72 0%,#fcedd5 80%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+
+
+.heading h6::before{
+	content:'';
+	position:absolute;
+	left:0px;
+	top:calc(50% - 1px);
+	width:60px;
+	height:1px;
+	background:#191919;
+	z-index:-1;
+}
+
+.heading h6.text-white::before{
+	background:#fff;
+}
+
+
+
+.amenities h4 {
+  color: #fff;
+  text-align: center;
+  font-size: 19px;
+  font-weight: 300;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+
+@media (max-width: 768px){
+.heading h2 {
+  font: 400 2.5rem 'DM Serif Display', serif;
+}
+.heading h2 {
+  font: 400 3.5rem 'DM Serif Display', serif;
+}
+.heading h2, .heading h4 {
+  display: table;
+  color: #000;
+  background: -webkit-linear-gradient(
+90deg
+,#191310 0%,#7a6544 80%);
+  background: -moz-linear-gradient(90deg,#191310 0%,#7a6544 80%);
+  background: linear-gradient(
+90deg
+,#191310 0%,#7a6544 80%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+}
+
+
+/* ul goldan golf */
+
+.amenities ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+.amenities ul li {
+  width: 20%;
+  padding: 3px;
+}
+
+.amenities-subBox {
+  width: 100%;
+  float: left;
+  position: relative;
+  background: rgba(0, 0, 0, 0.49);
+  display: flex;
+  align-items: center;
+}
+
+
+.amenities-subBox .img-fluid {
+  flex: 0 0 60px;
+  max-width: 60px;
+  text-align: center;
+  padding: 10px;
+}
+
+
+.amenities-subBox span{
+	color:#fff;
+	font-size:12px;
+	padding-left:3px;
+}
+
+img {
+  width: 100%;
+  display: block;
+  height: 100%;
+}
+
+.amenities h4 span {
+  color: #fcedd5;
+}
+
+.text-serif {
+  font-family: 'DM Serif Display', serif;
+}
+
+
+.floorplan
+{
+height: 1000px;
+width: 100%;
+
+column-gap: 40px;
+
+
+}
+
+
+.plann h4 {
+  color: #191919;
+  text-transform: uppercase;
+  position: relative;
+  padding-left: 70px;
+  margin-bottom: 0px;
+  font-size: 150%;
+
+
+}
+
+
+
+
+
+
+.plann h4:before {
+  content: '';
+  position: absolute;
+  left: 0px;
+  top: calc(50% - 1px);
+  width: 60px;
+  height: 1px;
+  background: #191919;
+  z-index: -1;
+}
+
+.r-gap
+{
+  margin-left: 5px;
+
+}
+
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+
+.button1 {
+  background-color: white;
+  color: black;
+  border: 2px solid #e7e7e7;
+  width: 272px;
+  border: none;
+  
+}
+
+.button1:hover {background-color: #e7e7e7;}
+
+.button1:active{
+  background:#bb9f72;
+}
+
+.button1:focus{
+  background:#bb9f72;
+}
+
+
+
+/* four div in a div */
+
+
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+}
+.row-eq-height > [class*='col-'] {
+  display: flex;
+  flex-direction: column;
+}
+.translucent > div {border: solid 2px #222; background: rgba(99,99,99,.5);}
+
+
+
+
+
+
+

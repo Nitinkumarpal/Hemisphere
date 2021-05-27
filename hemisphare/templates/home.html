@@ -1,0 +1,1900 @@
+{% extends 'base.html' %}
+{% include 'navbar.html' %}
+
+
+{% load static %}
+
+{% block title %}
+Home
+{% endblock title %}
+
+
+{% block body %}
+<script>window.onscroll = function () { scrollFunction() };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+            document.getElementById("navbar").style.padding = "20px 10px";
+            document.getElementById("logo").style.fontSize = "15px";
+        } else {
+            document.getElementById("navbar").style.padding = "30px 10px";
+            document.getElementById("logo").style.fontSize = "25px";
+        }
+    }
+
+
+
+
+
+
+
+
+</script>
+
+
+<!-- <link rel="stylesheet" href=
+"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+          integrity=
+"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous" />
+  
+    <link rel="stylesheet" type="text/css" href=
+"https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href=
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <style>
+        .navbar-nav.navbar-center {
+            position: absolute;
+            left: 50%;
+            transform: translatex(-50%);
+        }
+    </style>
+
+<nav class="navbar navbar-expand-sm navbar-light bg-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand text-success" href="#">
+          <img src="http://www.ecorp-property.in/hemisphere-landingpage/images/logo-w.png"  class="logo"style="height: 300px; width: 270px;">
+        </a>
+        <button class="navbar-toggler" type="button" 
+                data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false" 
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" 
+             id="navbarSupportedContent">
+            <ul class=" nav navbar-nav navbar-center">
+                <li class="nav-item active">
+                    <a class="nav-link" 
+                       href="#">
+                      Home 
+                      <span class="sr-only">
+                        (current)
+                      </span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" 
+                       href="#">
+                      About
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" 
+                       href="#">
+                      About
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav> -->
+
+
+<style>
+    .header {
+        width: 100%;
+        float: left;
+        position: fixed;
+        background: #191310;
+        top: 0;
+        z-index: 9999;
+        transition: all 300ms ease-in-out;
+    }
+
+
+    #enqBtn {
+        BACKGROUND: #bb9f72;
+    }
+
+    .header .mainHeader .navi ul li {
+        padding: 10px 0;
+    }
+
+    .header.fixed .navi ul li a {
+    font-size: 12px;
+    color: white;
+}
+    .header .mainHeader .navi ul li {
+        padding: 10px 0;
+    }
+
+
+    .logo img {
+        padding: 10px;
+        background: #191310;
+        height: auto;
+        transition: all 300ms ease-in-out;
+    }
+
+    img {
+        width: 100%;
+        display: block;
+    }
+
+
+
+.header .mainHeader .navi ul li {
+        padding: 10px 0;
+    }
+
+    .mobheader {
+        display: none;
+    }
+
+
+    .header .mainHeader {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        position: relative;
+    }
+
+    .logo {
+        width: 160px;
+        height: auto;
+        float: left;
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-height: 1px;
+        transition: all 300ms ease-in-out;
+    }
+
+    .header .mainHeader .navi ul {
+        display: flex;
+        align-content: center;
+    }
+
+
+    .header .mainHeader .navi ul li a {
+        color: rgb(255 255 255 / 65%);
+        font-weight: 500;
+        font-size: 13px;
+        padding: 0 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 300ms ease-in-out;
+        border-right: 1px solid rgba(255, 255, 255, 0.38);
+    }
+
+    .header .mainHeader .navi ul li a i {
+        margin-right: 5px;
+    }
+
+    .header .mainHeader .navi ul li a {
+        color: rgb(255 255 255 / 65%);
+        font-weight: 500;
+        font-size: 13px;
+        padding: 0 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 300ms ease-in-out;
+        border-right: 1px solid rgba(255, 255, 255, 0.38);
+    }
+
+</style>
+
+
+<div class="mobheader">
+    <nav class="navi">
+        <ul class="list-inline">
+            <li><a href="mailto:sale@hemisphere.com"><i class="fa fa-envelope"></i><span>sale@hemisphere.com</span></a>
+            </li>
+            <li class="enqBtn" id="enqBtn"><a href="javascript:;">Enquiry</a></li>
+        </ul>
+    </nav>
+</div>
+<div class="header">
+    <div class="container">
+        <div class="mainHeader">
+            <div class="logo"><a href="index.php"><img
+                        src="http://www.ecorp-property.in/hemisphere-landingpage/images/logo-w.png"
+                        alt="The Hemisphere"></a></div>
+            <nav class="navi">
+                <ul class="list-inline">
+                    <li class="lastulmob"><a href="tel:+919990202617"><i class="fa fa-phone-alt"></i><span><strong>+91
+                                    9555 977 000</strong></span></a></li>
+                    <li class="mob-none"><a href="#"><i class="fa fa-map-marker-alt"></i><span>Plot No. REP 2 sec 27
+                                Greater Noida</span></a></li>
+                    <li class="mob-none"><a href="mailto:sale@hemisphere.com"><i
+                                class="fa fa-envelope"></i><span>sale@hemisphere.com</span></a></li>
+                    <li class="mob-none" class="enqBtn" id="enqBtn"><a href="javascript:;">Enquiry</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+<link rel="stylesheet" href="{% static 'css/bootstrap.css'  %}">
+
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css'  %}">
+<link rel="stylesheet" href="{% static 'css/custom.css'  %}">
+<link rel="stylesheet" href="{% static 'css/custom1.css'  %}">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="{% static 'js/magnify.js' %}"></script>
+
+<script src="{% static 'js/custom.js' %}"></script>
+<script src="{% static 'js/bootstrap.js' %}"></script>
+
+
+
+<div class="imgp">
+    <img src="{% static 'media/image/banner1.jpg' %}" alt="Snow" style="width:100%; height: 100%;">
+
+    <div class="top-left">
+        <h4>The Hemisphere</h4>
+    </div>
+
+    <div class="centered">
+        <h1>Great spaces for a<br> Healthy & Perfect <br>lifestyle</h1>
+        <h5>OWN A SUITE @ RS.59.26* CR.</h5>
+    </div>
+</div>
+<!-- Faclities of Hemisphere  -->
+
+<div class="w-100 float-left img-text scrollto padding WelcometoTheHemis">
+    <div class="container">
+        <div class="heading mx-auto text-center">
+            <h2 class="mx-auto mb-0">Welcome to The Hemisphere</h2>
+            <h4 class="mx-auto">The brightest addition to Greater Noida Lifestyle</h4>
+        </div>
+        <article class="overviewText text-center w-100">
+            <h5>Enjoy the best-in-class limited edition luxury villas and apartments designed with utmost finesse.</h5>
+            <p>We are offering ultra-luxury villas and premium apartments in the heart of Greater Noida. Away from the
+                cities, as a golfing oasis, it maintains its attraction for the people to break out of the clatter of
+                the big city noises. Greenery abounds as verdant wide expanses rush to embrace. Pollution never touches
+                these parts and health looks up almost immediately. <span class="mob-overviewspan">read more</span></p>
+            <div class="overvier-readmore">
+                <p>Large luxurious home close to the golf course nestling amongst outstanding natural beauty with offers
+                    spectacular views of water bodies, these homes offer everything you dreamed about. A spectacular
+                    blend of the classical and the contemporary, it exudes luxurious elegance in a grandiose vision.</p>
+
+
+                <ul class="list-inline">
+                    <li>
+                        <section>
+                            <div class="img-fluid"><img
+                                    src="http://www.ecorp-property.in/hemisphere-landingpage/images/icons/golf-bag.png"
+                                    alt="Golf"></div>
+                            <span>Located on 9 hole designer golf course</span>
+                        </section>
+                    </li>
+
+                    <li>
+                        <section>
+                            <div class="img-fluid"><img
+                                    src="http://www.ecorp-property.in/hemisphere-landingpage/images/icons/golf-cart.png"
+                                    alt="Golf"></div>
+                            <span>Golf Course view to all units</span>
+                        </section>
+                    </li>
+
+                    <li>
+                        <section>
+                            <div class="img-fluid"><img
+                                    src="http://www.ecorp-property.in/hemisphere-landingpage/images/icons/green.png"
+                                    alt="green"></div>
+                            <span>80% Green with world class Landscaping</span>
+                        </section>
+                    </li>
+                    <li>
+                        <section>
+                            <div class="img-fluid"><img
+                                    src="http://www.ecorp-property.in/hemisphere-landingpage/images/icons/house.png"
+                                    alt="No high rise"></div>
+                            <span>No high rise construction in and around vicinity</span>
+                        </section>
+                    </li>
+                </ul>
+            </div>
+        </article>
+    </div>
+</div>
+</div>
+
+<!-- Types of villas and Appartment -->
+<div class="w-100 float-left">
+    <div class="container">
+        <div class="projectBtnHead w-100 float-left">
+            <ul class="list-inline">
+                <li>
+                    <button class="projectBtn active" data-target="1">
+                        <div class="img-fluid"><img
+                                src="http://www.ecorp-property.in/hemisphere-landingpage/images/logo-golf-villas.png"
+                                alt="Golf Villas"></div>
+                        <h5>3/4/5 BHK Villas</h5>
+                    </button>
+                </li>
+                <li>
+                    <button class="projectBtn" data-target="2">
+                        <div class="img-fluid"><img
+                                src="http://www.ecorp-property.in/hemisphere-landingpage/images/logo-golf-suites.png"
+                                alt="Golf Suites"></div>
+                        <h5>2/3 BHK Apartments</h5>
+                    </button>
+                </li>
+            </ul>
+            <div class="heading mx-auto mb-0">
+                <h2>Golf Villas</h2>
+            </div>
+            <p>With The Hemisphere Golf Villas, we are offering 9-hole golf course besides the basic amenities of
+                comfort and convenience. The Hemisphere is among the unique luxury Villa projects in Greater Noida that
+                not only ensconce you in comfort and indulge you to luxuriate in the grandeur but also have a plethora
+                of options and configurations - 3/4/5 BHK Villas ( 3015 sqft - 5435 sqft).</p>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Gold Standerd Life Styel -->
+
+
+
+
+<div class="w-100 float-left projectContainer" id="projectContainer1">
+    <div class="w-100 float-left padding bg-image"
+        style="background-image:url(http://www.ecorp-property.in/hemisphere-landingpage/images/banner2.jpg);">
+        <div class="container">
+            <div class="heading mx-auto">
+                <h6 class="text-white">Golf Villas</h6>
+                <h2 class="text-white">Amenities</h2>
+            </div>
+            <div class="amenities w-100">
+                <h4>Experience <span class="text-serif">Gold-Standard</span> Lifestyle</h4>
+                <ul class="list-inline w-100">
+                    <li>
+                        <div class="amenities-subBox">
+                            <div class="img-fluid"><img
+                                    src="http://www.ecorp-property.in/hemisphere-landingpage/images/icons/golf.png"
+                                    alt="Golf Course"></div>
+                            <span>Golf Course</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="amenities-subBox">
+                            <div class="img-fluid"><img
+                                    src="http://www.ecorp-property.in/hemisphere-landingpage/images/icons/swimming-pool.png"
+                                    alt="Swimming Pool"></div>
+                            <span>Swimming Pool</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="amenities-subBox">
+                            <div class="img-fluid"><img
+                                    src="http://www.ecorp-property.in/hemisphere-landingpage/images/icons/sports.png"
+                                    alt="Sports Facility"></div>
+                            <span>Sports Facility</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="amenities-subBox">
+                            <div class="img-fluid"><img
+                                    src="http://www.ecorp-property.in/hemisphere-landingpage/images/icons/club-house.png"
+                                    alt="Club House"></div>
+                            <span>Club House</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="amenities-subBox">
+                            <div class="img-fluid"><img
+                                    src="http://www.ecorp-property.in/hemisphere-landingpage/images/icons/kids-play.png"
+                                    alt="Kids Play Area"></div>
+                            <span>Kids Play Area</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="amenities-subBox">
+                            <div class="img-fluid"><img
+                                    src="http://www.ecorp-property.in/hemisphere-landingpage/images/icons/gym.png"
+                                    alt="Gym"></div>
+                            <span>Gymnasium</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="amenities-subBox">
+                            <div class="img-fluid"><img
+                                    src="http://www.ecorp-property.in/hemisphere-landingpage/images/icons/park.png"
+                                    alt="Landscape Garden"></div>
+                            <span>Landscape Garden</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="amenities-subBox">
+                            <div class="img-fluid"><img
+                                    src="http://www.ecorp-property.in/hemisphere-landingpage/images/icons/parking.png"
+                                    alt="Car Parking"></div>
+                            <span>Car Parking</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="amenities-subBox">
+                            <div class="img-fluid"><img
+                                    src="http://www.ecorp-property.in/hemisphere-landingpage/images/icons/yoga.png"
+                                    alt="Meditation Area"></div>
+                            <span>Meditation Area</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="amenities-subBox">
+                            <div class="img-fluid"><img
+                                    src="http://www.ecorp-property.in/hemisphere-landingpage/images/golf-villas/fp/vb/vb-gf.jpg"
+                                    alt="3-tier Security"></div>
+                            <span class="textstyle" >3-tier Security</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- floor plans -->
+    <div class="container" style=" margin-top: 40%; ">
+        <div class="container plann">
+
+
+            <h4>Golf Villas</h4>
+            <h1>Foor Plans</h1>
+            <div class="row ">
+                <button class="button button1" id="ButtonId1"><b>Villa
+                        VB </b></button>
+                <button class="button button1" id="ButtonId2"><b>Villa
+                        VC</b></button>
+                <button class="button button1" id="ButtonId3"><b>Villa
+                        VD</b></button>
+                <button class="button button1" id="ButtonId4"><b>Villa
+                        VE</b></button>
+
+            </div>
+            <hr>
+
+
+            <div class="hide_all_except" id="div1">
+                <div style="float: left; width: 540px;">
+                    <div style="float: left; width: 270px;  height: 270px;"><img id="11" onClick="GFG_click(this.id)"
+                            onmouseover="bigImg(this)" onmouseout="normalImg(this)"
+                            src="http://www.ecorp-property.in/hemisphere-landingpage/images/golf-villas/fp/vb/vb-gf.jpg"
+                            alt="3-tier Security">
+                    </div>
+                    <div id="myModal" class="modal">
+                        <span class="close">&times;</span>
+                        <img class="modal-content" id="img01">
+                        <div id="caption"></div>
+                    </div>
+                    <div style="float: right; width: 270px;  height: 270px;"><img id="12" onmouseover="bigImg(this)"
+                            onmouseout="normalImg(this)"
+                            src="http://www.ecorp-property.in/hemisphere-landingpage/images/golf-villas/fp/vb/vb-ff.jpg"
+                            alt="3-tier Security"></div>
+                </div>
+                <div style="float: right;">
+                    <div style="float: left; width: 270px;  height: 270px; "><img id="13" onmouseover="bigImg(this)"
+                            onmouseout="normalImg(this)"
+                            src="http://www.ecorp-property.in/hemisphere-landingpage/images/golf-villas/fp/vb/vb-sf.jpg"
+                            alt="3-tier Security"></div>
+
+                    <div style="float: right ; width: 270px;  height: 270px; "><img id="14" onmouseover="bigImg(this)"
+                            onmouseout="normalImg(this)"
+                            src="http://www.ecorp-property.in/hemisphere-landingpage/images/golf-villas/fp/vb/vb-tf.jpg"
+                            alt="3-tier Security"></div>
+                </div>
+                <div class="container">
+                    <nav aria-label="breadcrumb">
+                        <div class="row">
+                            <div class="col"><b>Carpet Area:373.80 Sq.mt.
+                            </b></div>
+                            <div class="col"><b>Exclusive Area:131.12sq.mt.</b></div>
+                            <div class="col"><b>Total Area:504.92sq.mt.</b></div>
+                            <div class="col"><b>Total Area:5435sq.mt</b></div>
+                        </div>
+                    </nav>
+                </div>
+
+            </div>
+
+
+            <div class="hide_all_except" id="div2">
+                <div style="float: left; width: 540px;">
+                    <div style="float: left; width: 270px;  height: 270px;"><img id="21" onmouseover="bigImg(this)"
+                            onmouseout="normalImg(this)"
+                            src="http://www.ecorp-property.in/hemisphere-landingpage/images/golf-villas/fp/vc/vc-gf.jpg"
+                            alt="3-tier Security">
+                    </div>
+                    <div id="myModal2" class="modal">
+                        <span class="close">&times;</span>
+                        <img class="modal-content" id="img02">
+                        <div id="caption"></div>
+                    </div>
+                    <div style="float: right; width: 270px;  height: 270px;"><img id="22" onmouseover="bigImg(this)"
+                            onmouseout="normalImg(this)"
+                            src="http://www.ecorp-property.in/hemisphere-landingpage/images/golf-villas/fp/vc/vc-ff.jpg"
+                            alt="3-tier Security"></div>
+                </div>
+
+                <div style="float: right;">
+                    <div style="float: left; width: 270px;  height: 270px; "><img id="23" onmouseover="bigImg(this)"
+                            onmouseout="normalImg(this)"
+                            src="http://www.ecorp-property.in/hemisphere-landingpage/images/golf-villas/fp/vc/vc-sf.jpg"
+                            alt="3-tier Security"></div>
+                    <div style="float: right ; width: 270px;  height: 270px; "><img id="24" onmouseover="bigImg(this)"
+                            onmouseout="normalImg(this)"
+                            src="http://www.ecorp-property.in/hemisphere-landingpage/images/golf-villas/fp/vc/vc-terrace.jpg"
+                            alt="3-tier Security"></div>
+                </div>
+                <div class="container">
+                    <nav aria-label="breadcrumb">
+                        <div class="row">
+                            <div class="col"><b>Carpet Area:285.86 Sq.mt.</b></div>
+                            <div class="col"><b>Exclusive Area:82.03 Sq.mt</b></div>
+                            <div class="col"><b>Total Area:367.89 Sq.mt</b></div>
+                            <div class="col"><b>Total Area:3960 Sq.mt</b></div>
+                        </div>
+                    </nav>
+                </div>
+
+            </div>
+
+
+
+            <div class="hide_all_except" id="div3">
+                <div style="float: left; width: 540px;">
+                    <div style="float: left; width: 270px;  height: 270px;"><img id="31" onmouseover="bigImg(this)"
+                            onmouseout="normalImg(this)"
+                            src="http://www.ecorp-property.in/hemisphere-landingpage/images/golf-villas/fp/vd/vd-basement.jpg"
+                            alt="3-tier Security">
+                    </div>
+                    <div style="float: right; width: 270px;  height: 270px; "><img id="32" onmouseover="bigImg(this)"
+                            onmouseout="normalImg(this)"
+                            src="http://www.ecorp-property.in/hemisphere-landingpage/images/golf-villas/fp/vd/vd-gf.jpg"
+                            alt="3-tier Security"></div>
+                </div>
+                <div id="myModal3" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img03">
+                    <div id="caption"></div>
+                </div>
+                <div style="float: right;">
+                    <div style="float: left; width: 270px;  height: 270px;"><img id="33" onmouseover="bigImg(this)"
+                            onmouseout="normalImg(this)"
+                            src="http://www.ecorp-property.in/hemisphere-landingpage/images/golf-villas/fp/vd/vd-ff.jpg"
+                            alt="3-tier Security"></div>
+                    <div style="float: right ; width: 270px;  height: 270px; "><img id="34" onmouseover="bigImg(this)"
+                            onmouseout="normalImg(this)"
+                            src="http://www.ecorp-property.in/hemisphere-landingpage/images/golf-villas/fp/vd/vd-terrace.jpg"
+                            alt="3-tier Security"></div>
+                </div>
+                <div class="container">
+                    <nav aria-label="breadcrumb">
+                        <div class="row">
+                            <div class="col"><b>Carpet Area:243.75 Sq.mt.</b></div>
+                            <div class="col"><b>Exclusive Area:189.19 Sq.mt.</b></div>
+                            <div class="col"><b>Total Area:432.94 Sq.mt.</b></div>
+                            <div class="col"><b>Total Area: 4,660 Sq.ft.</b></div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+
+
+
+            <div class="hide_all_except" id="div4">
+                <div style="float: left; width: 540px;">
+                    <div style="float: left; width: 270px;  height: 270px;"><img id="41" onmouseover="bigImg(this)"
+                            onmouseout="normalImg(this)"
+                            src="http://www.ecorp-property.in/hemisphere-landingpage/images/golf-villas/fp/ve/ve-basement.jpg"
+                            alt="3-tier Security">
+                    </div>
+                    <div style="float: right; width: 270px;  height: 270px; "><img id="42" onmouseover="bigImg(this)"
+                            onmouseout="normalImg(this)"
+                            src="http://www.ecorp-property.in/hemisphere-landingpage/images/golf-villas/fp/ve/ve-gf.jpg"
+                            alt="3-tier Security"></div>
+                </div>
+                <div id="myModal4" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img04">
+                    <div id="caption"></div>
+                </div>
+                <div style="float: right;">
+                    <div style="float: left; width: 270px;  height: 270px; "><img id="43" onmouseover="bigImg(this)"
+                            onmouseout="normalImg(this)"
+                            src="http://www.ecorp-property.in/hemisphere-landingpage/images/golf-villas/fp/ve/ve-ff.jpg"
+                            alt="3-tier Security"></div>
+                    <div style="float: right ; width: 270px;  height: 270px; "><img id="44" onmouseover="bigImg(this)"
+                            onmouseout="normalImg(this)"
+                            src="http://www.ecorp-property.in/hemisphere-landingpage/images/golf-villas/fp/ve/ve-terrace.jpg"
+                            alt="3-tier Security"></div>
+                </div>
+                <div class="container">
+                    <nav aria-label="breadcrumb">
+                        <div class="row">
+                            <div class="col"><b>Carpet Area:210.95 Sq.mt.</b></div>
+                            <div class="col"><b>Exclusive Area:152.89 Sq.mt.</b></div>
+                            <div class="col"><b>Total Area:363.84 Sq.mt.</b></div>
+                            <div class="col"><b>Total Area:3,916 Sq.ft.</b></div>
+                        </div>
+                    </nav>
+                </div>
+
+            </div>
+            
+        </div>
+
+
+    </div>
+    <div class="location_map">
+        <div class="container map">
+
+
+            <h4>Golf Villas</h4>
+
+            <h1>Location Map</h1>
+
+
+            <div class="div1">
+                <div class="div11" style="float:left; width: 50%;">
+                    <div class="img1" style="height: 20%; width: 20%; float: left;">
+                        <img src="http://www.ecorp-property.in/hemisphere-landingpage/images/icons/train.png"
+                            alt="Education">
+                    </div>
+                    <b>
+                        <p style="font-weight: bolder;">Delta-1, Metro Station</p>
+                    </b>
+                    <p style=" background-color: rgb(0, 0, 0,0.1); 
+                    
+                    border-radius: 20px; 
+                    width: auto; 
+                    height: auto; 
+                    padding: 5px 10px 5px 20px; 
+                    font-size: 18px; ">
+                        Stone's throw away</p>
+
+
+
+
+                    <div class="img1" style="height: 20%; width: 20%; float: left;">
+                        <img src="http://www.ecorp-property.in/hemisphere-landingpage/images/icons/education.png"
+                            alt="Education">
+                    </div>
+                    <b>
+                        <p style="font-weight: bolder;">Education Hub</p>
+                    </b>
+                    <p style=" background-color: rgb(0, 0, 0,0.1); 
+                    
+                    border-radius: 20px; 
+                    width: auto; 
+                    height: auto; 
+                    padding: 5px 10px 5px 20px; 
+                    font-size: 18px; "
+                        >
+                        5 min. drive</p>
+
+
+
+
+
+                    <div class="img1" style="height: 20%; width: 20%; float: left;">
+                        <img src="http://www.ecorp-property.in/hemisphere-landingpage/images/icons/road.png"
+                            alt="Education">
+                    </div>
+                    <b>
+                        <p style="font-weight: bolder;">DMIC</p>
+                    </b>
+                    <p
+                    style=" background-color: rgb(0, 0, 0,0.1); 
+                    
+                    border-radius: 20px; 
+                    width: auto; 
+                    height: auto; 
+                    padding: 5px 10px 5px 20px; 
+                    font-size: 18px; ">
+                        5 min. drive</p>
+
+
+
+
+
+                    <div class="img1" style="height: 20%; width: 20%; float: left;">
+                        <img src="http://www.ecorp-property.in/hemisphere-landingpage/images/icons/safari.png"
+                            alt="Education">
+                    </div>
+                    <b>
+                        <p style="font-weight: bolder;">Night Safari</p>
+                    </b>
+                    <p
+                      style=" background-color: rgb(0, 0, 0,0.1); 
+                    
+                    border-radius: 20px; 
+                    width: auto; 
+                    height: auto; 
+                    padding: 5px 10px 5px 20px; 
+                    font-size: 18px; ">
+                        10 min. drive</p>
+
+
+
+
+
+
+                    <div class="img1" style="height: 20%; width: 20%; float: left;">
+                        <img src="http://www.ecorp-property.in/hemisphere-landingpage/images/icons/f1-track.png"
+                            alt="Education">
+                    </div>
+                    <b>
+                        <p style="font-weight: bolder;">F1 Track</p>
+                    </b>
+                    <p
+                    style=" background-color: rgb(0, 0, 0,0.1); 
+                    
+                    border-radius: 20px; 
+                    width: auto; 
+                    height: auto; 
+                    padding: 5px 10px 5px 20px; 
+                    font-size: 18px; ">
+                        20 min. drive</p>
+
+
+
+
+                    <div class="img1" style="height: 20%; width: 20%; float: left;">
+                        <img src="http://www.ecorp-property.in/hemisphere-landingpage/images/icons/airport.png"
+                            alt="Education">
+                    </div>
+                    <b>
+                        <p style="font-weight: bolder;">Jewar International Airport Proposed</p>
+                    </b>
+                    <p
+                    style=" background-color: rgb(0, 0, 0,0.1); 
+                    
+                    border-radius: 20px; 
+                    width: auto; 
+                    height: auto; 
+                    padding: 5px 10px 5px 20px; 
+                    font-size: 18px; ">
+                        35 min. drive</p>
+                </div>
+
+
+
+
+
+                <div style="float:right; width: 50%;">
+                    <div class="img1" style="height: 20%; width: 20%; float: left;">
+                        <img src="http://www.ecorp-property.in/hemisphere-landingpage/images/icons/cricket.png"
+                            alt="Education">
+                    </div>
+                    <b>
+                        <p style="font-weight: bolder;">Cricket Stedium</p>
+                    </b>
+                    <p
+                    style=" background-color:rgb(0, 0, 0,0.1); 
+                    
+                    border-radius: 20px; 
+                    width: auto; 
+                    height: auto; 
+                    padding: 5px 10px 5px 20px; 
+                    font-size: 18px; ">
+                        5 min. drive</p>
+
+
+                    <div class="img1" style="height: 20%; width: 20%; float: left;">
+                        <img src="http://www.ecorp-property.in/hemisphere-landingpage/images/icons/industry.png"
+                            alt="Education">
+                    </div>
+                    <b>
+                        <p style="font-weight: bolder;">Industry</p>
+                    </b>
+                    <p
+                    style=" background-color: rgb(0, 0, 0,0.1); 
+                    
+                    border-radius: 20px; 
+                    width: auto; 
+                    height: auto; 
+                    padding: 5px 10px 5px 20px; 
+                    font-size: 18px; ">
+                        5 min. drive</p>
+
+
+
+
+
+                    <div class="img1" style="height: 20%; width: 20%; float: left;">
+                        <img src="http://www.ecorp-property.in/hemisphere-landingpage/images/icons/highway.png"
+                            alt="Education">
+                    </div>
+                    <b>
+                        <p style="font-weight: bolder;">Yamuna Expressway</p>
+                    </b>
+                    <p
+                    style=" background-color: rgb(0, 0, 0,0.1); 
+                    
+                    border-radius: 20px; 
+                    width: auto; 
+                    height: auto; 
+                    padding: 5px 10px 5px 20px; 
+                    font-size: 18px; ">
+                        5 min. drive</p>
+
+
+
+
+
+
+
+                    <div class="img1" style="height: 20%; width: 20%; float: left;">
+                        <img src="http://www.ecorp-property.in/hemisphere-landingpage/images/icons/shopping.png"
+                            alt="Education">
+                    </div>
+                    <b>
+                        <p style="font-weight: bolder;">Expo Mart</p>
+                    </b>
+                    <p
+                    style=" background-color: rgb(0, 0, 0,0.1); 
+                    
+                    border-radius: 20px; 
+                    width: auto; 
+                    height: auto; 
+                    padding: 5px 10px 5px 20px; 
+                    font-size: 18px; ">
+                        5 min. drive</p>
+
+
+
+
+
+
+                    <div class="img1" style="height: 20%; width: 20%; float: left;">
+                        <img src="http://www.ecorp-property.in/hemisphere-landingpage/images/icons/green-area.png"
+                            alt="Education">
+                    </div>
+                    <b>
+                        <p style="font-weight: bolder;">Modern City Surrounded with Open Green Area</p>
+                    </b>
+                    <p
+                    style=" background-color: rgb(0, 0, 0,0.1); 
+                    
+                    border-radius: 20px; 
+                    width: auto; 
+                    height: auto; 
+                    padding: 5px 10px 5px 20px; 
+                    font-size: 18px; ">
+                        5 min. drive</p>
+
+
+
+
+
+
+
+                    <div class="img1" style="height: 20%; width: 20%; float: left;">
+                        <img src="http://www.ecorp-property.in/hemisphere-landingpage/images/icons/film-city.png"
+                            alt="Education">
+                    </div>
+                    <b>
+                        <p style="font-weight: bolder;">Film City</p>
+                    </b>
+                    <p
+                    style=" background-color: rgb(0, 0, 0,0.1); 
+                    
+                    border-radius: 20px; 
+                    width: auto; 
+                    height: auto; 
+                    padding: 5px 10px 5px 20px; 
+                    font-size: 18px; ">
+                        20 min. drive</p>
+
+
+
+
+
+                </div>
+
+
+            </div>
+
+
+            <div class="div2"><img
+                    src="http://www.ecorp-property.in/hemisphere-landingpage/images/golf-villas/location-map.jpg "
+                    alt="Location"></div>
+        </div>
+
+    </div>
+
+
+
+
+    <div class="content">
+        <div class="row">
+<form method="POST" >
+    {% csrf_token %}
+            <table>
+                <tr>
+                    <td><input placeholder="Name*" type="text" name="Name" autofocus /></td>
+
+
+                    <td><input placeholder="Email*" type="email" name="Email" autofocus /></td>
+
+                    <td><input placeholder="Mobile*" type="text" name="Mobile" autofocus /></td>
+
+                    <td><textarea placeholder="Message" type="text" name="Message" autofocus> </textarea></td>
+                    <td>
+
+                        <div class="col-sm-2 form-group">
+
+                            <button type="submit" class="btn btn-primary btn-lg round">Submit</button>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+        </form>
+
+        </div>
+
+
+
+
+
+    </div>
+
+
+
+
+    <div class=" frm" style="margin-bottom: 70px;">
+        <div class="container frm1">
+            <h4>Golf Villas</h4>
+
+            <h1>Enquery</h1>
+
+
+            <p>Wish to get a call back from our team? Fill in your details.
+
+            </p>
+<form method="POST">
+    {% csrf_token %}
+            <table>
+                <tr>
+                    <td><input placeholder="Name*" type="text" name="Name" autofocus /></td>
+
+
+                    <td><input placeholder="Email*" type="text" name="Mobile" autofocus /></td>
+
+                    <td><input placeholder="Mobile*" type="text" name="Email" autofocus /></td>
+
+                    <td><textarea  placeholder="Describe yourself here..." type="text" name="Message" autofocus> </textarea></td>
+                    <td>
+
+                        <div class="col-sm-2 form-group">
+
+                            <button type="button" class="btn btn-primary btn-lg round">Submit</button>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </form>
+
+        </div>
+    </div>
+
+    <style>
+        .frm {
+            height: 400px;
+
+
+            margin-bottom: 40px;
+            margin-top: 40x;
+        }
+
+        .frm h4 {
+            color: #191919;
+            text-transform: uppercase;
+            position: relative;
+            padding-left: 70px;
+            margin-bottom: 0px;
+            font-size: 150%;
+
+
+        }
+
+        .frm h4:before {
+            content: '';
+            position: absolute;
+            left: 0px;
+            top: calc(50% - 1px);
+            width: 60px;
+            height: 1px;
+            background: #191919;
+            z-index: -1;
+        }
+
+        .frm1 input {
+            border: 0;
+            outline: 0;
+            border-bottom: 2px solid black;
+            font-size: 1.4rem;
+            color: #ccc;
+
+        }
+
+        .frm1 textarea {
+            border: 0;
+            outline: 0;
+            border-bottom: 2px solid black;
+            font-size: 1.4rem;
+            color: #ccc;
+
+        }
+
+
+
+        .row input {
+            border: 0;
+            outline: 0;
+            border-bottom: 2px solid #bb9f72;
+            font-size: 1.4rem;
+            color: #ccc;
+            background-color: rgba(0,0,0,0.0);
+
+        }
+
+        .row textarea {
+            border: 0;
+            outline: 0;
+            border-bottom: 2px solid #bb9f72;
+            font-size: 1.4rem;
+            color: #ccc;
+            background-color: rgba(0,0,0,0.0);
+
+        }
+
+
+        .frm1 h1 {
+            font-size: 500%;
+            margin-bottom: 70px;
+            font-family: "DM Serif Display", serif;
+            background: -webkit-linear-gradient(left, black 0%, #bb9f72 50%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+
+        .frm1 h1 {
+            font-size: 500%;
+            margin-bottom: 70px;
+            font-family: "DM Serif Display", serif;
+font-weight: bolder;
+            background: -webkit-linear-gradient(left, black 0%, #bb9f72 50%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+
+
+    <!-- footer -->
+    <style>
+        /* map */
+
+        .map h1 {
+            font-size: 500%;
+            margin-bottom: 70px;
+            font-weight: bolder;
+            font-family: "DM Serif Display", serif;
+            background: -webkit-linear-gradient(left, black 0%, #bb9f72 50%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+
+        .plann h1 {
+            font-size: 500%;
+            margin-bottom: 70px;
+            font-family: "DM Serif Display", serif;
+font-weight: bolder;
+            background: -webkit-linear-gradient(left, black 0%, #bb9f72 50%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .map h4 {
+            color: #191919;
+            text-transform: uppercase;
+            position: relative;
+            padding-left: 70px;
+            margin-bottom: 0px;
+            font-size: 150%;
+
+
+        }
+
+        .map h4:before {
+            content: '';
+            position: absolute;
+            left: 0px;
+            top: calc(50% - 1px);
+            width: 60px;
+            height: 1px;
+           
+            z-index: -1;
+        }
+
+
+
+
+
+        .content {
+            position: absolute;
+            bottom: 0;
+            background: rgb(0, 0, 0);
+            /* Fallback color */
+            background: rgba(0, 0, 0, 0.5);
+            /* Black background with 0.5 opacity */
+            color: #f1f1f1;
+            width: 100%;
+            padding: 20px;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+        }
+
+        /* footer button */
+
+
+        .btn {
+            display: inline-block;
+            padding: 6px 12px;
+            margin-bottom: 0;
+            font-size: 14px;
+            font-weight: normal;
+            line-height: 1.42857143;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            background-image: none;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            padding: 10px 16px;
+        }
+
+        .btn-lg {
+            font-size: 18px;
+            line-height: 1.33;
+            border-radius: 6px;
+        }
+
+        .btn-primary {
+            color: #fff;
+            background-color: #bb9f72;
+            border-color: #bb9f72;
+        }
+
+        .btn-primary:hover,
+        .btn-primary:focus,
+        .btn-primary:active,
+        .btn-primary.active,
+        .open .dropdown-toggle.btn-primary {
+            color: #fff;
+            background-color: #bb9f72;
+            border-color: #bb9f72;
+        }
+
+        /***********************
+  ROUND BUTTONS
+************************/
+        .round {
+            border-radius: 24px;
+        }
+
+        /***********************
+  CUSTON BTN VALUES
+************************/
+
+        .btn {
+            padding: 14px 24px;
+            border: 0 none;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .btn:focus,
+        .btn:active:focus,
+        .btn.active:focus {
+            outline: 0 none;
+        }
+
+        .btn-primary {
+            background: #bb9f72;
+            color: black;
+        }
+
+        .btn-primary:hover,
+        .btn-primary:focus,
+        .btn-primary:active,
+        .btn-primary.active,
+        .open>.dropdown-toggle.btn-primary {
+            background: white;
+        }
+
+        .btn-primary:active,
+        .btn-primary.active {
+            background: #bb9f72;
+            box-shadow: none;
+        }
+    </style>
+
+
+
+
+
+
+
+
+    <script>
+        // function hideallexcept(className, must_show) {
+        //     var els = document.getElementsByTagName('div')
+        //     for (i = 0; i < els.length; i++) {
+        //         if (els.item(i).className == className) {
+        //             els.item(i).style.display = "none";
+        //         }
+        //         else {
+        //             document.getElementById(must_show).style.display = 'block';
+        //         }
+        //     }
+
+        // }
+
+
+
+        // $('#ButtonId').on('click', function () {
+        //     $(this).toggleClass('ButtonClicked');
+        // });
+
+
+        /////////
+        $(document).ready(function () {
+            $("#div1").fadeIn();
+            $("#div2,#div3,#div4").fadeOut();
+        });
+
+
+
+        $("#ButtonId1").on('click', function () {
+            $("#div1").fadeIn();
+            $("#div2,#div3,#div4").fadeOut();
+        });
+
+
+        $("#ButtonId2").on('click', function () {
+            $("#div2").fadeIn();
+            $("#div1,#div3,#div4").fadeOut();
+        });
+
+
+
+        $("#ButtonId3").on('click', function () {
+            $("#div3").fadeIn();
+            $("#div1,#div2,#div4").fadeOut();
+        });
+        $("#ButtonId4").on('click', function () {
+            $("#div4").fadeIn();
+            $("#div1,#div2,#div3").fadeOut();
+        });
+    </script>
+
+
+
+    <script>
+
+    </script>
+    <style>
+        #myImg {
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #myImg:hover {
+            opacity: 0.7;
+        }
+
+        /* The Modal (background) */
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            padding-top: 100px;
+            /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.9);
+            /* Black w/ opacity */
+        }
+
+        /* Modal Content (image) */
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+
+        /* Caption of Modal Image */
+        #caption {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+            text-align: center;
+            color: #ccc;
+            padding: 10px 0;
+            height: 150px;
+        }
+
+        /* Add Animation */
+        .modal-content,
+        #caption {
+            -webkit-animation-name: zoom;
+            -webkit-animation-duration: 0.6s;
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+
+        @-webkit-keyframes zoom {
+            from {
+                -webkit-transform: scale(0)
+            }
+
+            to {
+                -webkit-transform: scale(1)
+            }
+        }
+
+        @keyframes zoom {
+            from {
+                transform: scale(0)
+            }
+
+            to {
+                transform: scale(1)
+            }
+        }
+
+        /* The Close Button */
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* 100% Image Width on Smaller Screens */
+        @media only screen and (max-width: 700px) {
+            .modal-content {
+                width: 100%;
+            }
+        }
+
+
+
+        .ButtonClicked {
+            font-size: 72px;
+            background: -webkit-linear-gradient();
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            /* -webkit-text-size-adjust: ; */
+            -webkit-background-clip: text;
+        }
+    </style>
+
+
+
+
+
+
+
+
+    <!-- big image-->
+
+
+
+    <script>
+        function bigImg(x) {
+            x.style.height = "280px";
+            x.style.width = "280px";
+        }
+
+        function normalImg(x) {
+            x.style.height = "272px";
+            x.style.width = "272px";
+        }
+    </script>
+    <!--1  -->
+
+
+
+
+    <script>// 11
+
+
+        var modal = document.getElementById("myModal");
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var img = document.getElementById("11");
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+        img.onclick = function () {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        //   12
+
+
+        var modal = document.getElementById("myModal");
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var img = document.getElementById("12");
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+        img.onclick = function () {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // 13
+        var modal = document.getElementById("myModal");
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var img = document.getElementById("13");
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+        img.onclick = function () {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+
+        // 14
+
+
+
+        var modal = document.getElementById("myModal");
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var img = document.getElementById("14");
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+        img.onclick = function () {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+
+
+
+
+        // 2
+
+
+
+        // 21
+
+
+        var modal = document.getElementById("myModal2");
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var img = document.getElementById("21");
+        var modalImg = document.getElementById("img02");
+        var captionText = document.getElementById("caption");
+        img.onclick = function () {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+
+        // 22
+
+
+
+
+        var modal = document.getElementById("myModal2");
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var img = document.getElementById("22");
+        var modalImg = document.getElementById("img02");
+        var captionText = document.getElementById("caption");
+        img.onclick = function () {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+
+
+
+        // 23
+
+
+
+
+        var modal = document.getElementById("myModal2");
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var img = document.getElementById("23");
+        var modalImg = document.getElementById("img02");
+        var captionText = document.getElementById("caption");
+        img.onclick = function () {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+
+        // 24
+
+
+
+        var modal = document.getElementById("myModal2");
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var img = document.getElementById("24");
+        var modalImg = document.getElementById("img02");
+        var captionText = document.getElementById("caption");
+        img.onclick = function () {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+
+
+        //   // 3
+
+        //   // 31
+
+        var modal = document.getElementById("myModal3");
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var img = document.getElementById("31");
+        var modalImg = document.getElementById("img03");
+        var captionText = document.getElementById("caption");
+        img.onclick = function () {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+
+
+        // 32
+
+
+
+        var modal = document.getElementById("myModal3");
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var img = document.getElementById("32");
+        var modalImg = document.getElementById("img03");
+        var captionText = document.getElementById("caption");
+        img.onclick = function () {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+
+
+        // 33
+
+
+
+
+
+
+        var modal = document.getElementById("myModal3");
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var img = document.getElementById("33");
+        var modalImg = document.getElementById("img03");
+        var captionText = document.getElementById("caption");
+        img.onclick = function () {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+
+
+        // 34
+
+
+        var modal = document.getElementById("myModal3");
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var img = document.getElementById("34");
+        var modalImg = document.getElementById("img03");
+        var captionText = document.getElementById("caption");
+        img.onclick = function () {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+
+
+
+        // 4
+
+
+
+
+        // 41
+
+
+
+        var modal = document.getElementById("myModal4");
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var img = document.getElementById("41");
+        var modalImg = document.getElementById("img04");
+        var captionText = document.getElementById("caption");
+        img.onclick = function () {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+
+
+
+        // 42
+
+
+
+        var modal = document.getElementById("myModal4");
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var img = document.getElementById("42");
+        var modalImg = document.getElementById("img04");
+        var captionText = document.getElementById("caption");
+        img.onclick = function () {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+
+
+        // 43
+
+
+        var modal = document.getElementById("myModal4");
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var img = document.getElementById("43");
+        var modalImg = document.getElementById("img04");
+        var captionText = document.getElementById("caption");
+        img.onclick = function () {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+
+        // 44 
+
+
+
+        var modal = document.getElementById("myModal4");
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var img = document.getElementById("44");
+        var modalImg = document.getElementById("img04");
+        var captionText = document.getElementById("caption");
+        img.onclick = function () {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+    </script>
+
+
+
+
+
+    <!-- Location Map -->
+
+
+
+
+    {% endblock body %}
